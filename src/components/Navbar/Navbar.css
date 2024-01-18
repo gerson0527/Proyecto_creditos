@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+.Navbar{
+    position: relative;
+    height: 80px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.Icon-hamburger{
+    display: none;
+
+}
+.Search{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 36rem;
+    margin-right: 1.5rem;
+    color: #8b5cf6;
+    width: 70%;
+    height: 50%;
+}
+.Search-input{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    color: #8b5cf6;
+    z-index: 99;
+}
+.Search-input button{
+    background-color: transparent;
+    background-image: none;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
+.Search input{
+    display: block;
+    width: 65%;
+    height: 100%;
+    font-size: 0.875rem;
+    outline: none;
+    color: #d1d5db;
+    padding: 0.5rem 1rem;
+    line-height: 1.25rem;
+    border: none;
+    box-shadow: 0 0 0 2px rgba(75, 85, 99, 0.1);
+    padding-left: 2rem;
+    color: #4a5568;
+    position: absolute;
+    right: 0;
+    border-radius: 3px;
+}
+.Icons{
+    display: flex;
+}
+.Icons ul{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.Icons ul li{
+     height: 50px;   
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Icons button{
+    background-color: transparent;
+    background-image: none;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
