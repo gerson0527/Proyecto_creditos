@@ -45,10 +45,10 @@ const Navbar = () => {
                         <img src={Vite} alt="Nombre de la persona" />
                         </a>
                     </li>
-                    <ul className={`${mostrarOpciones ? 'Icons-nombre-aparecer' : 'Icons-nombre ul'}`}>
-                        <li><a href=""><FaUser className='Icons-nombre-svg' /> Profile</a></li>
-                        <li><a href=""><FaCog className='Icons-nombre-svg'/> Settings</a></li>
-                        <li><a href=""><FaSignOutAlt className='Icons-nombre-svg' /> Log out</a></li>
+                    <ul className={`${mostrarOpciones ? 'Icons-nombre-aparecer' : 'Icons-nombre-ul'}`}>
+                        <li><a href=""><FaUser className='Icons-nombre-svg' /><span className='opcion-texto'>Profile</span></a></li>
+                        <li><a href=""><FaCog className='Icons-nombre-svg'/>  <span className='opcion-texto'>Settings</span></a></li>
+                        <li><a href=""><FaSignOutAlt className='Icons-nombre-svg mover-icon' /> <span className='opcion-texto'>Log out</span></a></li>
                     </ul>
                 </div>
             </ul>
