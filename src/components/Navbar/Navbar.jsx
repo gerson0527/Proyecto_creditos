@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Vite from "../../assets/react.svg";
+import  { useState } from 'react';
+import imagen from "../../assets/imagen.jpg";
 import { FaBars, FaSearch , FaMoon, FaSun,FaBell, FaUser, FaCog, FaSignOutAlt  } from 'react-icons/fa';
 import './Navbar.css';
  
@@ -42,7 +42,7 @@ const Navbar = () => {
                 <div className="Icons-nombre">
                     <li onClick={handleImagenClick}>
                         <a href=''>
-                        <img src={Vite} alt="Nombre de la persona" />
+                        <img src={imagen} alt="Nombre de la persona" className='imagen-person' />
                         </a>
                     </li>
                     <ul className={`${mostrarOpciones ? 'Icons-nombre-aparecer' : 'Icons-nombre-ul'}`}>

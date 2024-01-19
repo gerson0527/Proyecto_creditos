@@ -98,8 +98,8 @@ body{
 }
 .Icons-nombre ul{
     position: absolute;
-    right: 20px;
-    top: 55px;
+    right: 30px;
+    top: 45px;
     padding: 10px;
     min-width: 220px;
     border-radius: 10px;
@@ -111,6 +111,11 @@ body{
 .Icons-nombre ul li {
     width: 100%;
     margin-left: 10px;
+}
+.imagen-person{
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 50px;
 }
 
 .Icons-nombre ul li a{
@@ -139,4 +144,13 @@ body{
 }
 .mover-icon{
     margin-left: 3px;
+}
+
+/* PARTE DE LA IZQUIERDA */
+.parte-izquierda{
+    width: 250px;
+    background-color: #8b5cf6;
+    position: fixed;
+    left: 0;
+    height:100%;
 }
