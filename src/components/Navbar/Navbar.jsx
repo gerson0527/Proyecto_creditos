@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Vite from "../../assets/react.svg";
-import { FaBars, FaSearch , FaMoon, FaSun,FaBell } from 'react-icons/fa';
+import { FaBars, FaSearch , FaMoon, FaSun,FaBell, FaUser, FaCog, FaSignOutAlt  } from 'react-icons/fa';
 import './Navbar.css';
  
 const Navbar = () => {
@@ -8,6 +8,13 @@ const Navbar = () => {
         const handleClick = () => {
           setIsSun(!isSun);
         };
+        const [mostrarOpciones, setMostrarOpciones] = useState(false);
+
+        const handleImagenClick = (e) => {
+          e.preventDefault();  // Evita la recarga de la página por defecto
+          setMostrarOpciones(!mostrarOpciones);
+        };
+
   return (
     <div className='Navbar'>
         <div className="Icon-hamburger">
@@ -32,8 +39,18 @@ const Navbar = () => {
                     </button>
                 </li>
                 <li><button><FaBell size={20} style={{ color: 'rgb(126, 58, 242)' }} /></button></li>
-
-                <li><a href=''><img src={Vite} alt="Nombre de la persona" /></a></li>
+                <div className="Icons-nombre">
+                    <li onClick={handleImagenClick}>
+                        <a href=''>
+                        <img src={Vite} alt="Nombre de la persona" />
+                        </a>
+                    </li>
+                    <ul className={`${mostrarOpciones ? 'Icons-nombre-aparecer' : 'Icons-nombre ul'}`}>
+                        <li><a href=""><FaUser className='Icons-nombre-svg' /> Profile</a></li>
+                        <li><a href=""><FaCog className='Icons-nombre-svg'/> Settings</a></li>
+                        <li><a href=""><FaSignOutAlt className='Icons-nombre-svg' /> Log out</a></li>
+                    </ul>
+                </div>
             </ul>
         </div>
     </div>

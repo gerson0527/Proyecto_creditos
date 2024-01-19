@@ -69,12 +69,11 @@
 }
 .Icons ul{
     display: flex;
-    
     justify-content: center;
     align-items: center;
 }
 .Icons ul li{
-     height: 50px;   
+    height: 50px;   
     width: 60px;
     display: flex;
     justify-content: center;
@@ -86,4 +85,33 @@
     border-radius: 40px;
     border: none;
     cursor: pointer;
+}
+
+.Icons-nombre{
+    position: relative;
+    cursor: pointer;
+}
+.Icons-nombre ul{
+    position: absolute;
+    right: 20px;
+    top: 55px;
+    padding: 10px;
+    min-width: 220px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: none;
+
+}
+.Icons-nombre ul li {
+    width: 100%;
+}
+
+.Icons-nombre ul li a{
+    width: 100%;
+    text-decoration: none;
+    margin-right: 50px;
+}
+.Icons-nombre-aparecer{
+    display: block !important;
 }
