@@ -109,6 +109,11 @@ body{
     display: none;
 
 }
+.nombre_imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .Icons-nombre ul li {
     width: 100%;
     margin-left: 10px;

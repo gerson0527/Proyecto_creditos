@@ -65,7 +65,7 @@ const Navbar = () => {
                     <li><button><FaBell size={20} style={{ color: 'rgb(126, 58, 242)' }} /></button></li>
                     <div className="Icons-nombre">
                         <li onClick={handleImagenClick}>
-                            <a href=''>
+                            <a href='' className='nombre_imagen'>
                             <img src={imagen} alt="Nombre de la persona" className='imagen-person' />
                             </a>
                         </li>
