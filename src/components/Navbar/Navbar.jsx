@@ -9,16 +9,20 @@ const Navbar = () => {
     const storedActiveIndex = localStorage.getItem('activeIndex');
     const [activeIndex, setActiveIndex] = useState(storedActiveIndex ? parseInt(storedActiveIndex) : 0);
     const [isSun, setIsSun] = useState(true);
+    const [nav, setINav] = useState(true);
+
     const [mostrarOpciones, setMostrarOpciones] = useState(false);
   
     useEffect(() => {
       localStorage.setItem('activeIndex', activeIndex.toString());
     }, [activeIndex]);
   
-    const handleClick = () => {
-      setIsSun(!isSun);
+    const handleClickNav = () => {
+        setINav(!nav);
     };
-  
+      const handleClick = () => {
+        setIsSun(!isSun);
+    };
     const handleImagenClick = (e) => {
       e.preventDefault();
       setMostrarOpciones(!mostrarOpciones);
@@ -41,15 +45,14 @@ const Navbar = () => {
   return (
     <div className='Navbar__completo'>
         <div className='Navbar__completo__izquierdo'>
-            <div className="Icon-hamburger">
-            <FaBars size={20} style={{ color: 'rgb(126, 58, 242)' }} />
+            <div className={`Icon-hamburger`} onClick={handleClickNav}>
+                <FaBars size={20} style={{ color: 'rgb(126, 58, 242)', position: 'absolute', right: 40 }} />
             </div>
             <div className="Search">
                 <div className='Search-input'>    
                 <button><FaSearch size={16} style={{ color: 'rgb(126, 58, 242)' }} /></button>
                 </div>
                 <input type="text"  placeholder="Search for projects"/>
-                
             </div>
             <div className="Icons">
                 <ul>
@@ -78,7 +81,7 @@ const Navbar = () => {
                 </ul>
             </div>
         </div>
-        <div className="Navbar__completo__derecho">
+        <div className={`${nav ? 'Navbar__completo__derecho' : 'Navbar__completo__derecho__esconder'}`}>
             <div className="logo">
                 <h1>Empresa</h1>
             </div>
