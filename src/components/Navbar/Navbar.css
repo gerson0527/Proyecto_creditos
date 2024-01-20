@@ -7,7 +7,8 @@
 body{
     font-family: 'Inter', sans-serif;
 }
-.Navbar{
+
+.Navbar__completo__izquierdo{
     position: relative;
     height: 80px;
     top: 0;
@@ -145,12 +146,78 @@ body{
 .mover-icon{
     margin-left: 3px;
 }
-
-/* PARTE DE LA IZQUIERDA */
-.parte-izquierda{
+/* PARTE DE LA DERECHA */
+.Navbar__completo__derecho{
     width: 250px;
-    background-color: #8b5cf6;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     position: fixed;
     left: 0;
     height:100%;
+    top: 0;
+}
+.logo{
+    padding: 10px;
+}
+.logo h1{
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 20px;
+    color: #1a1c23;
+}
+.navbar__dashboard {
+    height: 100%;
+}
+  
+.navigation-bar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; 
+    padding: 10px;
+    margin-top: 30px;
+}
+.navigation-bar li {
+margin-bottom: 50px; /* Ajusta el espacio entre elementos */
+}
+
+.navigation-bar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #707275;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.navigation-bar a:hover {
+    color: #1A1C23;
+}
+
+.navigation-bar a.active {
+    color: #1a1c23;
+    width: 1px;
+    position: relative;
+}
+
+.navigation-bar .barra-vertical {
+    position: absolute;
+    width:1px;
+    height: 30px; /* Ajusta la altura según tus necesidades */
+    background-color: #6b46c1;
+    border-radius: 0 12px 12px 0;
+    margin-left: -10px; /* Ajusta el margen según tus necesidades */
+    padding: 2px;
+}
+.navigation-bar .icon {
+    margin-right: 8px;
+}
+.icon{
+    margin-left: 10px;
+}
+.navbar__dashboard ul li {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 40px;
 }
