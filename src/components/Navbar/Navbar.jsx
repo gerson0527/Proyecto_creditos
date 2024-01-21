@@ -34,13 +34,14 @@ const Navbar = () => {
     };
   
     const navigationItems = [
-      { label: 'Dashboard', icon: <FaHome /> },
-      { label: 'Asesoras', icon: <FaUserTie /> },
-      { label: 'Administradoras', icon: <FaBuilding /> },
-      { label: 'Clientes', icon: <FaUsers /> },
-      { label: 'Bancos', icon: <FaUniversity /> },
-      { label: 'Salir', icon: <FaSignOutAlt /> },
-    ];
+        { label: 'Dashboard', icon: <FaHome />, path: '/' },
+        { label: 'Asesoras', icon: <FaUserTie />, path: '/advisors' },
+        { label: 'Administradoras', icon: <FaBuilding />, path: '/administrators' },
+        { label: 'Clientes', icon: <FaUsers />, path: '/clients' },
+        { label: 'Bancos', icon: <FaUniversity />, path: '/banks' },
+        { label: 'Salir', icon: <FaSignOutAlt />, path: '/logout' },
+      ];
+    
 
   return (
     <div className='Navbar__completo'>
