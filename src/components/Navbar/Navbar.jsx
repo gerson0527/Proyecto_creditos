@@ -1,4 +1,5 @@
 import  { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import imagen from "../../assets/imagen.jpg";
 import { FaBars, FaSearch , FaMoon, FaSun,FaBell, FaUser, FaCog, FaSignOutAlt  } from 'react-icons/fa';
 import { FaHome, FaUserTie, FaUsers, FaUniversity,FaBuilding } from 'react-icons/fa';
@@ -34,7 +35,7 @@ const Navbar = () => {
     };
   
     const navigationItems = [
-        { label: 'Dashboard', icon: <FaHome />, path: '/' },
+        { label: 'Dashboard', icon: <FaHome />, path: '/dashboard' },
         { label: 'Asesoras', icon: <FaUserTie />, path: '/advisors' },
         { label: 'Administradoras', icon: <FaBuilding />, path: '/administrators' },
         { label: 'Clientes', icon: <FaUsers />, path: '/clients' },
@@ -87,22 +88,17 @@ const Navbar = () => {
                 <h1>Empresa</h1>
             </div>
             <div className="navbar__dashboard">
-                <ul className="navigation-bar">
+            <ul className="navigation-bar">
                 {navigationItems.map((item, index) => (
-                    <li
-                    key={index}
-                    onClick={(event) => handleItemClick(index, event)}
-                    >
-                    <a href="#" className={index === activeIndex ? 'active' : ''}>
+                <li key={index} onClick={(event) => handleItemClick(index, event)}>
+                    <Link to={item.path} className={index === activeIndex ? 'active' : ''}>
                         <span className="icon">{item.icon}</span>
                         <span className="text">{item.label}</span>
-                        {index === activeIndex && (
-                        <span className="barra-vertical" aria-hidden="true"></span>
-                        )}
-                    </a>
-                    </li>
+                        {index === activeIndex && <span className="barra-vertical" aria-hidden="true"></span>}
+                    </Link>
+                </li>
                 ))}
-                </ul>
+            </ul>
             </div>
         </div>
     </div>
